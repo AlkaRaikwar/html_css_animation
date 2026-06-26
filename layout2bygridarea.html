@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .p{
+            display: grid;
+            grid-template-columns: repeat(5,200px);
+            grid-template-rows: 100px  repeat(2,150px) 100px ;
+            gap: 10px;
+
+            height: 700px;
+            width: 1500px;
+
+            justify-content: center;
+            align-content: center;
+            
+
+        }
+
+        .box{
+          border: 8px solid black;
+            border-radius: 10px;
+        }
+
+        .boxhead{
+            grid-column:1/-1 ;
+        
+            background-image: url("golla.png");
+            background-size: cover -10px ;
+
+
+            position: relative;
+            
+          
+        }
+        .circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+         border: 4px solid #00F5FF;
+    box-shadow:
+        0 0 10px #00F5FF,
+        0 0 25px #00F5FF,
+        0 0 45px #00F5FF;
+
+    background-image: url("golumolu.png");
+    background-size: cover;
+    font-weight: bolder;
+    font-size: small;
+    color: aliceblue;
+    text-align: center;
+
+    position: absolute;
+    top: 12%;
+    left: 8%;
+
+    animation: namemove 5s ease-in-out infinite alternate;
+}
+       @keyframes namemove{
+
+    0%{
+        left:8%;
+        transform: translateY(0) scale(1);
+    }
+
+    15%{
+        transform: translateY(-15px) scale(1.08);
+    }
+
+    30%{
+        transform: translateY(0) scale(0.95);
+    }
+
+    50%{
+        left:70%;
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    70%{
+        transform: translateY(0) scale(0.95);
+    }
+
+    85%{
+        transform: translateY(-15px) scale(1.08);
+    }
+
+    100%{
+        left:70%;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+        .aside{
+            grid-row: 2/4;
+              background-image: url("golumolu.png");
+            background-size: cover ;
+             border: 4px groove black;
+    box-shadow:
+        0 0 10px #00F5FF,
+        0 0 25px #00F5FF,
+        0 0 45px #00F5FF;
+             
+        }
+
+        .content{
+            grid-column: 2/-1;
+             background-image: url("car.png");
+            background-size: cover ;
+            
+            
+        }
+
+        .navbar{
+            grid-column: 2/4;
+             background-image: url("chess.png");
+            background-size: cover ;
+            
+        }
+        .na{
+            grid-column: 4/6;
+             background-image: url("goalset.png");
+            background-size: cover ;
+          
+        }
+        .footer{
+            grid-column: 1/-1;
+             background-image: url("footer.png");
+            background-size: cover;
+             
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="p">
+        <div class="box boxhead">
+            <div class="circle"></div>
+        </div>
+
+        <div class="box  aside "></div>
+        <div class="box content"></div>
+        <div class="box navbar"></div>
+        <div class="box  na"></div>
+
+        <div class="box footer"></div>
+    </div>
+</body>
+</html>

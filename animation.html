@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .container {
+            height: 420px;
+            width: 590px;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 12px;
+            flex-wrap: wrap;
+
+
+        }
+
+        .goll {
+            height:50px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: darkblue;
+            margin-bottom: 40px;
+
+            transition: transform 2s ease;
+
+
+        }
+
+      #golla1:hover {
+            transform: translateY(-90px);
+            /* transform: translateY(0px); */
+        }
+      #golla2:hover {
+            transform: translateY(-90px);
+            /* transform: translateY(0px); */
+        }
+      #golla3:hover {
+            transform: translateY(-50px);
+            /* transform: translateY(0px); */
+        }
+      #golla4:hover {
+            transform: translateY(-50px);
+            /* transform: translateY(0px); */
+        }
+      #golla5:hover {
+            transform: translateY(-50px);
+            /* transform: translateY(0px); */
+        }
+
+        #golla1{
+        visibility: hidden;
+        }
+
+        #golla5{
+            visibility: hidden;
+        }
+     
+
+
+        /* ab   animation lagao    ki  har   gola   uppar jaye          -ve y men jaye   1st gola uparr jaye aaye then 2nd gola suru ho same kam karne ans*/
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+         
+
+        <div class="goll"  id="golla1" style="background-color:red;"></div>
+        <div class="goll"  id="golla2" style="background-color:blue;"></div>
+        <div class="goll"  id="golla3" style="background-color:yellow;"></div>
+        <div class="goll" id="golla4"  style="background-color:green;"></div>
+        <div class="goll" id="golla5"  style="background-color:green;"></div>
+
+        <div class="goll"  id="golla7 "style="background-color: aqua;"></div>
+        <div class="goll"  id="golla7 "style="background-color: aqua;"></div>
+
+                        <div class="goll"  id="golla5 "style="background-color: black;"></div>
+
+                                <div class="goll"  id="golla8 "style="background-color: aqua;"></div>
+                <div class="goll"  id="golla9 "style="background-color: aqua;"></div>
+    </div>
+</body>
+
+</html>
