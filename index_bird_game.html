@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing_Ball</title>
+    <style>
+
+        *{
+            margin: 0px;
+        }
+        body {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            height: 100vh;
+           width: 1500px;
+            background-color: black;
+            gap: 62px;
+
+
+
+           
+    overflow: hidden;
+
+    background: radial-gradient(circle at center, #101428 0%, #2a784b 100%);
+    
+    /* Ek halka sa glow effect backdrop me add karne ke liye */
+    box-shadow: inset 0 0 100px rgba(0, 255, 204, 0.05);
+
+
+}
+        
+
+
+
+        .bar {
+
+            display: flex;
+            height: 500px;
+            width: 1300px;
+            justify-content: space-between;
+            align-items: end;
+            /* border: 3px solid grey; */
+             
+        }
+
+        .p1 {
+            /* h,w nahi deya means  full body bala bydefult lega and   center men toh  child  jayega na    na ki khud parent div  */
+            display: flex;
+            height: 200px;
+            width: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+border-radius: 12px;
+border-top-left-radius: 0%;
+border-top-right-radius: 0%;
+            background-color:crimson;
+        }
+
+        .tub {
+            height: 100px;
+            width: 140px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            /* background-color: yellow; */
+            border: 34px groove springgreen;
+            border-top: turquoise;
+            border-radius: 40px;
+        }
+
+        .birdTOP {
+ height: 100px;
+ width: 400px;
+            background-image: url("bird2.png");
+            background-size: cover;
+            animation-name: animatedbirdTOP;
+            animation-duration: 14s;
+            animation-timing-function: ease-out;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+
+        }
+
+        @keyframes animatedbirdTOP {
+            0% {
+                /* ball  should be on its  original pos =   0px / center of body pos  /  */
+
+                /* start from its original pos */
+                transform: translateY(-260px);
+                background-color: orangered;
+
+            }
+
+            60% {
+
+                /* up from its original pos  */
+                transform: translate(1200px,-260PX);
+                background-color: olive;
+            }
+
+
+            100% {
+                transform: translate(-1200px,-260PX);
+            }
+
+
+        }
+        .birdBOTTOM {
+ height: 100px;
+ width: 400px;
+            background-image: url("bird.png");
+            background-size: cover;
+            animation-name: animatedbirdBOTTOM;
+            animation-duration: 14s;
+            animation-timing-function: ease-out;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+
+        }
+
+        @keyframes animatedbirdBOTTOM {
+            0% {
+                /* ball  should be on its  original pos =   0px / center of body pos  /  */
+
+                /* start from its original pos */
+                transform: translate(100PX,300px);
+                background-color: orangered;
+
+            }
+
+            40% {
+
+                /* up from its original pos  */
+                transform: translate(-1200px,300PX);
+                background-color: olive;
+            }
+    80% {
+                transform: translate(0px,300PX);
+            }
+            
+            100% {
+                transform: translate(1200px,300PX);
+            }
+
+
+        }
+
+        .ball {
+            height: 90px;
+            width: 90px;
+            background-color: orangered;
+            border-radius: 50%;
+             box-shadow: inset -10px -10px 20px yellow, 
+              10px 13px 15px cyan;
+            /* animation is also a  property to  elemnts  as  border,bg,color,h,w, .... */
+            animation-name: bouncingBall;
+            animation-duration: 6s;
+            animation-timing-function: ease-out;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+        }
+
+
+        /* animation to ball  by   defined hwere this  syntax */
+
+        @keyframes bouncingBall {
+            0% {
+                /* ball  should be on its  original pos =   0px / center of body pos  /  */
+
+                /* start from its original pos */
+                transform: translateY(0px);
+                background-color: orangered;
+
+            }
+
+            20% {
+
+                /* up from its original pos  */
+                transform: translateY(-200px);
+                background-color: purple;
+            }
+
+
+            40% {
+                transform: translate(210px, -200px);
+            }
+
+            80% {
+                transform: translate(210px, 80px);
+                background-color:yellow;
+            }
+
+            100% {
+                transform: translateY(-210px, 80px);
+                background-color: orangered;
+            }
+        }
+
+        .line {
+            height: 1px;
+            width: 190px;
+            border-bottom: 2px solid gray;
+
+        }
+
+
+        .p2 {
+            /* h,w nahi deya means  full body bala bydefult lega and   center men toh  child  jayega na    na ki khud parent div  */
+            display: flex;
+            height: 200px;
+            width: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+border-radius: 12px;
+border-top-left-radius: 0%;
+border-top-right-radius: 0%;
+            background-color: rgb(169, 102, 102);
+        }
+
+        .p3 {
+            /* h,w nahi deya means  full body bala bydefult lega and   center men toh  child  jayega na    na ki khud parent div  */
+            display: flex;
+            height: 200px;
+            width: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+border-radius: 12px;
+border-top-left-radius: 0%;
+border-top-right-radius: 0%;
+            background-color: rgb(128, 42, 42);
+        }
+    </style>
+
+</head>
+
+<body>
+ <div class="birdTOP"></div>
+ <div class="birdBOTTOM"></div>
+    <div class="bar">
+        <div class="p1">
+            <div class="ball ball1"></div>
+            <div class="line line1"></div>
+        </div>
+        <div class="tub"></div>
+        <!-- top se 1  chiriya  gir jaye iss tub men  -->
+        
+    </div>
+
+
+
+
+    <div class="bar">
+        <div class="p2">
+            <div class="ball ball2"></div>
+            <div class="line line2"></div>
+        </div>
+        <div class="tub"></div>
+    </div>
+
+    <div class="bar">
+        <div class="p3">
+            <div class="ball ball3"></div>
+            <div class="line line3"></div>
+        </div>
+        <div class="tub"></div>
+    </div>
+</body>
+
+</html>
